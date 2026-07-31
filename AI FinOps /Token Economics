@@ -1,0 +1,31 @@
+class TokenEconomics:
+
+
+    def analyze(
+        self,
+        requests,
+        avg_tokens
+    ):
+
+        monthly_tokens = (
+            requests *
+            avg_tokens
+        )
+
+        return {
+            "monthly_tokens":
+                monthly_tokens,
+            "optimization":
+                "Enable routing + caching"
+        }
+
+
+
+finops = TokenEconomics()
+
+print(
+    finops.analyze(
+        100000,
+        2000
+    )
+)
