@@ -1,0 +1,50 @@
+Documents
+    |
+Chunking
+    |
+Embeddings
+    |
+Vector Database
+    |
+Retriever
+    |
+LLM
+    |
+Response
+
+class RAGPipeline:
+
+
+    def retrieve(
+        self,
+        query
+    ):
+
+        return [
+            "Relevant enterprise document"
+        ]
+
+
+    def generate(
+        self,
+        context,
+        query
+    ):
+
+        return f"""
+        Answer:
+        {context}
+        """
+
+
+
+rag = RAGPipeline()
+
+print(
+    rag.generate(
+        rag.retrieve(
+            "cloud strategy"
+        ),
+        "cloud strategy"
+    )
+)
