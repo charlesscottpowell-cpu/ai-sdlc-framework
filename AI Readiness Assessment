@@ -1,0 +1,38 @@
+class AIReadiness:
+
+    def __init__(
+        self,
+        data,
+        governance,
+        infrastructure,
+        talent
+    ):
+        self.data = data
+        self.governance = governance
+        self.infrastructure = infrastructure
+        self.talent = talent
+
+
+    def score(self):
+
+        total = (
+            self.data +
+            self.governance +
+            self.infrastructure +
+            self.talent
+        )
+
+        return round(total / 20 * 100)
+
+
+assessment = AIReadiness(
+    4,
+    3,
+    5,
+    4
+)
+
+print(
+    assessment.score(),
+    "%"
+)
