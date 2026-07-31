@@ -1,0 +1,36 @@
+Application
+     |
+     |
+AI Gateway
+     |
+ ┌───────────┐
+ │           │
+GPT-5     Claude
+ │           │
+Gemini   Bedrock
+
+class ModelRouter:
+
+
+    def select_model(
+        self,
+        task
+    ):
+
+        if task == "reasoning":
+            return "claude"
+
+        if task == "coding":
+            return "gpt-5"
+
+        return "gemini"
+
+
+
+router = ModelRouter()
+
+print(
+    router.select_model(
+        "reasoning"
+    )
+)
